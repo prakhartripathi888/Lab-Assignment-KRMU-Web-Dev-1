@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Foodie – Food Delivery Service</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hidden checkbox toggles for CSS-only modals -->
+    <input type="checkbox" id="login-toggle" class="modal-toggle" />
+    <input type="checkbox" id="signup-toggle" class="modal-toggle" />
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Foodie</div>
+
+        <nav class="nav-links">
+            <a href="#categories">Categories</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="#offers">Offers</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#app">App</a>
+        </nav>
+
+        <div class="nav-btns">
+            <!-- Labels act as buttons and toggle the hidden checkboxes -->
+            <label for="login-toggle" class="btn outline">Login</label>
+            <label for="signup-toggle" class="btn primary">Sign Up</label>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Delicious Food Delivered To Your Doorstep 🍕</h1>
+            <p>Order from your favorite restaurants with fast delivery and great deals.</p>
+            <!-- CTA is an anchor to #restaurants so it "works" without JS -->
+            <a href="#restaurants" class="cta">Order Now</a>
+        </div>
+        <img src="https://source.unsplash.com/500x400/?food,delivery" alt="Food delivery" class="hero-img">
+    </section>
+
+    <!-- SEARCH BAR (submits to #restaurants so page jumps there) -->
+    <section class="search-section">
+        <form class="search-bar" action="#restaurants" method="get">
+            <input type="text" name="location" placeholder="Enter your location" aria-label="Location">
+            <select name="category" aria-label="Category">
+                <option value="">Choose Category</option>
+                <option value="pizza">Pizza</option>
+                <option value="burger">Burger</option>
+                <option value="sushi">Sushi</option>
+            </select>
+            <button type="submit" class="btn primary">Search</button>
+        </form>
+    </section>
+
+    <!-- CATEGORY GRID -->
+    <section class="categories" id="categories">
+        <h2>Explore Categories</h2>
+        <div class="grid">
+            <div class="cat-card">
+                <img src="https://source.unsplash.com/300x300/?pizza" alt="Pizza">
+                <span>Pizza</span>
+            </div>
+            <div class="cat-card">
+                <img src="https://source.unsplash.com/300x300/?burger" alt="Burger">
+                <span>Burger</span>
+            </div>
+            <div class="cat-card">
+                <img src="https://source.unsplash.com/300x300/?sushi" alt="Sushi">
+                <span>Sushi</span>
+            </div>
+            <div class="cat-card">
+                <img src="https://source.unsplash.com/300x300/?biryani" alt="Biryani">
+                <span>Biryani</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED RESTAURANTS -->
+    <section class="restaurants" id="restaurants">
+        <h2>Featured Restaurants</h2>
+        <div class="restaurant-grid">
+            <div class="res-card">
+                <img src="https://source.unsplash.com/400x300/?restaurant" alt="Urban Dine">
+                <h3>Urban Dine</h3>
+                <p>⭐ 4.5 | Fast Delivery</p>
+                <!-- Example "Order" button that links to a deep anchor or could start checkout flow -->
+                <a href="#app" class="btn outline small">Order</a>
+            </div>
+
+            <div class="res-card">
+                <img src="https://source.unsplash.com/400x300/?cafe" alt="Cafe Misto">
+                <h3>Cafe Misto</h3>
+                <p>⭐ 4.2 | Fresh Taste</p>
+                <a href="#app" class="btn outline small">Order</a>
+            </div>
+
+            <div class="res-card">
+                <img src="https://source.unsplash.com/400x300/?noodles" alt="Noodle Hub">
+                <h3>Noodle Hub</h3>
+                <p>⭐ 4.7 | Hot & Tasty</p>
+                <a href="#app" class="btn outline small">Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO OFFERS -->
+    <section class="offers" id="offers">
+        <div class="offer-banner">
+            🎉 Flat 50% OFF on First Order! <span class="code">Use Code: FIRST50</span>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <div class="test-card">
+                <img src="https://source.unsplash.com/100x100/?person" alt="Customer 1">
+                <p>"Amazing food and super fast delivery!"</p>
+                <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
+            </div>
+
+            <div class="test-card">
+                <img src="https://source.unsplash.com/100x100/?girl" alt="Customer 2">
+                <p>"My go-to app for weekend meals."</p>
+                <span>⭐ ⭐ ⭐ ⭐</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- APP DOWNLOAD SECTION -->
+    <section class="app-section" id="app">
+        <div class="app-content">
+            <h2>Download The App</h2>
+            <p>Order food faster and easier with our mobile app.</p>
+            <div class="app-buttons">
+                <a href="#" class="btn outline">📱 Google Play</a>
+                <a href="#" class="btn outline">🍏 App Store</a>
+            </div>
+        </div>
+        <img src="https://source.unsplash.com/350x500/?smartphone,app" alt="App preview">
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy</a></li>
+        </ul>
+        <p>© 2025 Foodie. All Rights Reserved.</p>
+    </footer>
+
+    <!-- CSS-only LOGIN MODAL -->
+    <div class="modal login-modal" aria-hidden="true">
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="login-title">
+            <label for="login-toggle" class="modal-close" title="Close">&times;</label>
+            <h3 id="login-title">Login</h3>
+            <form class="modal-form" action="#restaurants" method="get">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="btn primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CSS-only SIGNUP MODAL -->
+    <div class="modal signup-modal" aria-hidden="true">
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+            <label for="signup-toggle" class="modal-close" title="Close">&times;</label>
+            <h3 id="signup-title">Sign Up</h3>
+            <form class="modal-form" action="#restaurants" method="get">
+                <input type="text" name="name" placeholder="Full name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="btn primary">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
